@@ -1,0 +1,265 @@
+/*Smoky Ember Palatte & Global Reset*/
+:root{
+    --bg-dark: #1B1918;        /* Smoky Ash Black */
+    --surface-dark: #2D2825;   /* Charcoal Ash */
+    --neutral-muted: #8C827B;  /* Ash Brown / Greige */
+    --text-primary: #F4F1EA;   /* Soft Ash White */
+    --accent-secondary: #E05A36;/* Ember Orange */
+    --accent-primary: #C73E1D; /* Crimson Red */
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+/*Header & Navigation*/
+header{
+    background-color: var(--surface-dark);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    border-bottom: 2px solid rgba(140, 130, 123, 0.2); /*subtle border using neutral-muted*/
+}
+.logo h1{
+    font-size: 5.5rem;
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+.tagline{
+    font-size: 1.05rem;
+    color: var(--neutral-muted);
+    font-style: italic;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+nav a{
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: color 0.5s ease;
+}
+nav a:hover{
+    color: var(--accent-secondary); /* Ember Orange hover effect */
+}
+.header-cta .btn-small{
+    background-color: var(--accent-primary); 
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.5s ease;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+.header-cta .btn-small:hover {
+    background-color: var(--accent-secondary);
+}
+.status{
+    font-size: 2rem;
+    color: var(--neutral-muted);
+    letter-spacing: 0.5px;
+}
+/* Main Content & Section Spacing */
+main{
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+section{
+    margin-bottom: 4.5rem;
+}
+main h1, main h2{
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+/* Elegant ember accent line under main headings */
+main h1::after, main h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-secondary);
+}
+main p {
+    color: var(--neutral-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+#featured-menu table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--surface-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+#featured-menu th,
+#featured-menu tb{
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(140, 130, 123, 0.15);
+    vertical-align: middle;
+}
+#featured-menu th{
+    background-color: rgba(27, 25, 24, 0.6); /* Slightly darker ash for header row */
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+#featured-menu td img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    display:block;
+}
+/* Style dish names to pop out */
+#featured-menu td:nth-child(2) {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+/* Style descriptions */
+#featured-menu td:nth-child(3) {
+    color: var(--neutral-muted);
+    font-size: 1.2rem;
+}
+/* Right-align and color prices */
+#featured-menu th:last-child,
+#featured-menu td:last-child {
+    text-align: right;
+    color: var(--neutral-muted);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+/* Remove border from the last row */
+#featured-menu tr:last-child td {
+    border-bottom: none;
+}
+/* "View the full menu" link styling */
+#featured-menu p a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+#featured-menu p a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+/* Reservations Form Styling */
+#Reservations form{
+    max-width: 600px;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    background-color: var(--surface-dark);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+#Reservations input{
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    background-color: var(--bg-dark);
+    border: 1px solid rgba(140, 130, 123, 0.3);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.5s ease, box-shadow 0.5 ease; 
+}
+/* Custom styling placeholdr text color */
+#Reservation input::placeholder{
+    color: var(--neutral-muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+/* Input Focus State */
+#Reservation input:focus{
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 0 2px rgba(224, 90, 54, 0.2);
+}
+/* Submit Button Styling */
+#Reservations button[type="submit"]{
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    margin-top: 0.5rem;
+}
+#Reservations button[type="submit"].hover{
+    background-color: var(--accent-secondary);
+    transform: translateY(-1px)
+}
+/* Optional: Make date/time inputs look great across browsers */
+#Reservations input[type="date"],
+#Reservations input[type="time"] {
+    color-scheme: dark; /* ensures native calendar pickers match dark theme */
+}
+/* Testimonials Section Styling */
+#Testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+#Testimonials blockquote {
+    background-color: var(--surface-dark);
+    padding: 1.75rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-secondary);
+    color: var(--text-primary);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

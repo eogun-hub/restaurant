@@ -36,7 +36,7 @@ header{
     font-weight: 1000;
 }
 .tagline{
-    font-size: 1.05rem;
+    font-size: 1.75rem;
     color: var(--neutral-muted);
     font-style: italic;
 }
@@ -146,15 +146,20 @@ main p {
     border-radius: 6px;
     display:block;
 }
+/* Add breathing room between the image and the dish name */
+#featured-menu td:first-child {
+    padding-right: 1.5rem; /* Increase or decrease this value to adjust the spacing */
+}
 /* Style dish names to pop out */
 #featured-menu td:nth-child(2) {
     color: var(--text-primary);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 /* Style descriptions */
 #featured-menu td:nth-child(3) {
     color: var(--neutral-muted);
+    font-weight: 550;
     font-size: 1.2rem;
 }
 /* Right-align and color prices */
@@ -262,4 +267,34 @@ main p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+/* Contact & Location Section Styling */
+#Contact&Location {
+    background-color: var(--surface-dark);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 1.5rem;
+}
+#Contact&Location p {
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+#Contact&Location p:first-of-type {
+    margin-top: 1rem;
+}
+/* Footer Styling */
+footer {
+    background-color: var(--surface-dark);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(140, 130, 123, 0.2);
+    margin-top: 4rem;
+}
+footer p {
+    color: var(--neutral-muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin: 0;
 }

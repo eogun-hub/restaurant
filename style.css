@@ -288,13 +288,14 @@ main p {
 footer {
     background-color: var(--surface-dark);
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-top: 1px solid rgba(140, 130, 123, 0.2);
     margin-top: 4rem;
 }
 footer p {
     color: var(--neutral-muted);
     font-size: 0.9rem;
+    font-weight: 700;
     letter-spacing: 0.5px;
     margin: 0;
 }
